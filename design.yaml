@@ -1,0 +1,553 @@
+# ===== グローバル設定 =====
+global:
+  markup: "HTML5 / CSS3（SCSS）"
+  javascript: "ES6 + TypeScript"
+  libraries:
+    - "GSAP 3.x (ScrollTrigger, TextPlugin)"
+    - "LocomotiveScroll"
+    - "Swiper.js 8.x"
+    - "Intersection Observer API"
+    - "AOS (Animate On Scroll)"
+  fonts:
+    primary: "Google Fonts: Noto Sans JP (300, 400, 500, 700)"
+    secondary: "Google Fonts: Playfair Display (400, 700)"
+    accent: "Google Fonts: Inter (400, 500, 600)"
+  analytics:
+    - "Google Tag Manager"
+    - "Google Analytics 4"
+    - "gtag.js"
+  cdn: "jsDelivr + Cloudflare"
+  images:
+    format: "WebP + JPEG fallback"
+    loading: "lazy-load + IntersectionObserver"
+    compression: "80% quality, responsive sizes"
+  colors:
+    primary: "#000000"
+    secondary: "#FFFFFF"
+    accent: "#808080"
+    dark_gray: "#333333"
+    light_gray: "#F5F5F5"
+    text_primary: "#000000"
+    text_secondary: "#666666"
+
+# ===== セクション別デザイン仕様 =====
+sections:
+  # ===== Hero Section =====
+  - id: "hero"
+    name: "メインビジュアル"
+    layout:
+      type: "fullscreen"
+      dimensions: "100vw × 100vh"
+      position: "fixed background"
+
+    libraries:
+      - "Swiper.js (fade effect)"
+      - "GSAP ScrollTrigger"
+      - "LocomotiveScroll"
+
+    images:
+      slider:
+        count: 5
+        size: "2560×1440px"
+        format: "WebP + JPEG"
+        position: "object-fit: cover"
+        overlay: "linear-gradient(transparent 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.7) 100%)"
+        effect: "Ken Burns (subtle zoom + pan)"
+
+      content_images:
+        - "東淀川区の住宅街夕景（温かい窓明かり）"
+        - "マンション外観（住民が帰宅するシーン）"
+        - "一軒家の玄関（明かりが灯る）"
+        - "商店街の風景（地域の活気）"
+        - "家族団らんのシルエット（窓越し）"
+
+    typography:
+      main_copy:
+        text: "住民ファースト。"
+        font: "Noto Sans JP Bold"
+        size: "clamp(3rem, 8vw, 12rem)"
+        color: "#FFFFFF"
+        position: "absolute; left: 5%; bottom: 25%; z-index: 3"
+        animation: "typewriter effect (GSAP TextPlugin)"
+
+      sub_copy:
+        text: "まちに、暮らしに、寄り添う。"
+        font: "Noto Sans JP Medium"
+        size: "clamp(1.2rem, 3vw, 2.5rem)"
+        color: "#FFFFFF"
+        position: "absolute; left: 5%; bottom: 15%; z-index: 3"
+        animation: "fade in with delay"
+
+      tagline:
+        text: "誰かの「ただいま」が、今日もこの街に灯るように。"
+        font: "Noto Sans JP Light"
+        size: "clamp(0.9rem, 2vw, 1.4rem)"
+        color: "rgba(255,255,255,0.9)"
+        position: "absolute; left: 5%; bottom: 8%; z-index: 3"
+        animation: "slide up with delay"
+
+    cta_buttons:
+      primary:
+        text: "物件を探す"
+        position: "absolute; right: 5%; bottom: 15%; z-index: 3"
+        style: "background: #FFFFFF; color: #000000; padding: 16px 32px; border-radius: 50px"
+        hover: "transform: scale(1.05); box-shadow: 0 8px 30px rgba(0,0,0,0.3)"
+
+      secondary:
+        text: "お問い合わせ"
+        position: "absolute; right: 5%; bottom: 8%; z-index: 3"
+        style: "border: 2px solid #FFFFFF; color: #FFFFFF; padding: 14px 30px; border-radius: 50px"
+        hover: "background: #FFFFFF; color: #000000"
+
+    scroll_indicator:
+      position: "absolute; bottom: 3%; left: 50%; transform: translateX(-50%)"
+      animation: "bounce infinite"
+      style: "color: #FFFFFF; opacity: 0.7"
+
+  # ===== About Section =====
+  - id: "about"
+    name: "私たちについて"
+    layout:
+      type: "two-column"
+      dimensions: "100vw × auto"
+      padding: "120px 5%"
+      background: "#FFFFFF"
+
+    libraries:
+      - "GSAP ScrollTrigger"
+      - "Intersection Observer"
+
+    typography:
+      section_title:
+        text: "50年、この街とともに"
+        font: "Playfair Display Bold"
+        size: "clamp(2.5rem, 6vw, 4.5rem)"
+        color: "#000000"
+        position: "writing-mode: vertical-rl (SP: horizontal)"
+        animation: "slide in from left"
+
+      description:
+        font: "Noto Sans JP Regular"
+        size: "clamp(1rem, 2.5vw, 1.3rem)"
+        color: "#333333"
+        line_height: "1.8"
+        animation: "fade in with stagger"
+
+    images:
+      main_visual:
+        size: "800×600px"
+        position: "clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%)"
+        overlay: "mix-blend-mode: multiply; opacity: 0.1"
+        content: "東淀川区の街並み俯瞰（ドローン撮影風）"
+        animation: "parallax scroll effect"
+
+    features_cards:
+      layout: "CSS Grid 3 columns (SP: 1 column)"
+      gap: "40px"
+      card_style:
+        background: "#F5F5F5"
+        padding: "40px 30px"
+        border_radius: "20px"
+        hover: "transform: translateY(-10px); box-shadow: 0 20px 60px rgba(0,0,0,0.1)"
+
+      icons:
+        size: "80×80px SVG"
+        style: "background: #000000; border-radius: 50%; padding: 20px"
+        color: "#FFFFFF"
+
+  # ===== Mission & Vision Section =====
+  - id: "mission_vision"
+    name: "使命と目指す未来"
+    layout:
+      type: "centered"
+      dimensions: "100vw × auto"
+      padding: "150px 5%"
+      background: "linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%)"
+
+    libraries:
+      - "GSAP ScrollTrigger"
+      - "AOS"
+
+    typography:
+      section_title:
+        text: "MISSION & VISION"
+        font: "Playfair Display Regular"
+        size: "clamp(1.5rem, 4vw, 2.5rem)"
+        color: "#808080"
+        text_align: "center"
+        letter_spacing: "0.1em"
+        animation: "fade in"
+
+      mission_title:
+        font: "Noto Sans JP Bold"
+        size: "clamp(1.8rem, 4vw, 3rem)"
+        color: "#000000"
+        text_align: "center"
+        animation: "slide up"
+
+      vision_title:
+        font: "Noto Sans JP Bold"
+        size: "clamp(1.8rem, 4vw, 3rem)"
+        color: "#000000"
+        text_align: "center"
+        animation: "slide up with delay"
+
+    layout_structure:
+      mission_section:
+        position: "first half"
+        background: "#FFFFFF"
+        padding: "80px 40px"
+        border_radius: "30px"
+        box_shadow: "0 10px 50px rgba(0,0,0,0.05)"
+
+      vision_section:
+        position: "second half"
+        background: "#FFFFFF"
+        padding: "80px 40px"
+        border_radius: "30px"
+        box_shadow: "0 10px 50px rgba(0,0,0,0.05)"
+        margin_top: "60px"
+
+  # ===== Values Section =====
+  - id: "values"
+    name: "私たちの価値観"
+    layout:
+      type: "masonry"
+      dimensions: "100vw × auto"
+      padding: "120px 5%"
+      background: "#000000"
+
+    libraries:
+      - "GSAP ScrollTrigger"
+      - "Intersection Observer"
+
+    typography:
+      section_title:
+        text: "5つの大切にする価値観"
+        font: "Playfair Display Bold"
+        size: "clamp(2rem, 5vw, 3.5rem)"
+        color: "#FFFFFF"
+        text_align: "center"
+        animation: "fade in"
+
+    values_cards:
+      layout: "CSS Grid 2 columns (SP: 1 column)"
+      gap: "30px"
+      card_style:
+        background: "rgba(255,255,255,0.05)"
+        border: "1px solid rgba(255,255,255,0.1)"
+        padding: "50px 40px"
+        border_radius: "25px"
+        backdrop_filter: "blur(10px)"
+        hover: "background: rgba(255,255,255,0.1); transform: scale(1.02)"
+
+      card_typography:
+        title:
+          font: "Noto Sans JP Bold"
+          size: "clamp(1.3rem, 3vw, 1.8rem)"
+          color: "#FFFFFF"
+
+        description:
+          font: "Noto Sans JP Regular"
+          size: "clamp(0.9rem, 2vw, 1.1rem)"
+          color: "rgba(255,255,255,0.8)"
+          line_height: "1.7"
+
+      animation: "stagger fade in from bottom"
+
+    decorative_elements:
+      particles:
+        count: 20
+        animation: "floating particles (GSAP)"
+        opacity: "0.1 to 0.3"
+        color: "#FFFFFF"
+
+  # ===== Services Section =====
+  - id: "services"
+    name: "私たちにできること"
+    layout:
+      type: "grid"
+      dimensions: "100vw × auto"
+      padding: "120px 5%"
+      background: "#FFFFFF"
+
+    libraries:
+      - "GSAP ScrollTrigger"
+      - "Swiper.js (card carousel on mobile)"
+
+    typography:
+      section_title:
+        text: "私たちにできること"
+        font: "Playfair Display Bold"
+        size: "clamp(2.5rem, 6vw, 4rem)"
+        color: "#000000"
+        text_align: "center"
+        animation: "slide in"
+
+    services_grid:
+      layout: "CSS Grid 2×2 (SP: 1 column)"
+      gap: "40px"
+
+      card_design:
+        aspect_ratio: "4:3"
+        background: "#F5F5F5"
+        border_radius: "20px"
+        overflow: "hidden"
+        hover: "transform: translateY(-15px); box-shadow: 0 25px 80px rgba(0,0,0,0.15)"
+
+      card_images:
+        size: "600×450px"
+        position: "object-fit: cover"
+        overlay: "linear-gradient(transparent 50%, rgba(0,0,0,0.8) 100%)"
+        hover_effect: "scale(1.1)"
+
+      card_content:
+        position: "absolute; bottom: 0; left: 0; right: 0"
+        padding: "30px"
+        color: "#FFFFFF"
+
+        title:
+          font: "Noto Sans JP Bold"
+          size: "clamp(1.2rem, 3vw, 1.6rem)"
+
+        description:
+          font: "Noto Sans JP Regular"
+          size: "clamp(0.9rem, 2vw, 1.1rem)"
+          opacity: "0.9"
+
+  # ===== Commitment Section =====
+  - id: "commitment"
+    name: "地域とともに歩む取り組み"
+    layout:
+      type: "alternating"
+      dimensions: "100vw × auto"
+      padding: "120px 5%"
+      background: "linear-gradient(45deg, #F5F5F5 0%, #FFFFFF 50%, #F5F5F5 100%)"
+
+    libraries:
+      - "GSAP ScrollTrigger"
+      - "Intersection Observer"
+
+    typography:
+      section_title:
+        text: "地域とともに歩む取り組み"
+        font: "Playfair Display Bold"
+        size: "clamp(2rem, 5vw, 3.5rem)"
+        color: "#000000"
+        text_align: "center"
+        animation: "fade in"
+
+    commitment_items:
+      layout: "alternating left-right (SP: stacked)"
+      item_spacing: "100px"
+
+      item_design:
+        image_size: "600×400px"
+        image_shape: "border-radius: 20px"
+        image_animation: "parallax + hover scale"
+
+        text_container:
+          background: "#FFFFFF"
+          padding: "50px"
+          border_radius: "20px"
+          box_shadow: "0 15px 60px rgba(0,0,0,0.1)"
+          position: "overlapping image by 50px"
+
+        title:
+          font: "Noto Sans JP Bold"
+          size: "clamp(1.4rem, 3.5vw, 2rem)"
+          color: "#000000"
+
+        description:
+          font: "Noto Sans JP Regular"
+          size: "clamp(1rem, 2.5vw, 1.2rem)"
+          color: "#333333"
+          line_height: "1.7"
+
+  # ===== Area Information Section =====
+  - id: "area"
+    name: "対応エリア"
+    layout:
+      type: "hero-style"
+      dimensions: "100vw × 80vh"
+      background_attachment: "fixed"
+
+    libraries:
+      - "GSAP ScrollTrigger"
+      - "Mapbox GL JS (optional)"
+
+    background_image:
+      size: "2560×1440px"
+      content: "東淀川区の航空写真"
+      overlay: "rgba(0,0,0,0.5)"
+      effect: "parallax fixed"
+
+    typography:
+      main_title:
+        text: "東淀川区を中心とした\n地域密着サービス"
+        font: "Playfair Display Bold"
+        size: "clamp(2.5rem, 6vw, 4.5rem)"
+        color: "#FFFFFF"
+        text_align: "center"
+        animation: "slide up"
+
+      features_list:
+        layout: "horizontal scroll cards (SP)"
+        card_style:
+          background: "rgba(255,255,255,0.1)"
+          backdrop_filter: "blur(10px)"
+          border: "1px solid rgba(255,255,255,0.2)"
+          padding: "30px"
+          border_radius: "15px"
+
+        text_color: "#FFFFFF"
+
+  # ===== Company Information Section =====
+  - id: "company"
+    name: "会社案内"
+    layout:
+      type: "split"
+      dimensions: "100vw × auto"
+      padding: "120px 5%"
+      background: "#FFFFFF"
+
+    libraries:
+      - "GSAP ScrollTrigger"
+      - "CountUp.js"
+
+    layout_structure:
+      left_column:
+        content: "company information"
+        width: "60%"
+
+      right_column:
+        content: "representative image"
+        width: "40%"
+        image_size: "500×700px"
+        image_style: "clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%)"
+        content_image: "代表者の写真またはオフィス風景"
+
+    typography:
+      section_title:
+        text: "会社案内"
+        font: "Playfair Display Bold"
+        size: "clamp(2.5rem, 6vw, 4rem)"
+        color: "#000000"
+        animation: "slide in"
+
+      company_stats:
+        layout: "grid 2×2"
+        number_font: "Playfair Display Bold"
+        number_size: "clamp(2rem, 5vw, 3.5rem)"
+        number_color: "#000000"
+        label_font: "Noto Sans JP Regular"
+        animation: "counter animation on scroll"
+
+    representative_message:
+      background: "#F5F5F5"
+      padding: "40px"
+      border_radius: "20px"
+      border_left: "5px solid #000000"
+
+  # ===== Contact Section =====
+  - id: "contact"
+    name: "お問い合わせ"
+    layout:
+      type: "full-width"
+      dimensions: "100vw × auto"
+      padding: "120px 5%"
+      background: "#000000"
+
+    libraries:
+      - "GSAP ScrollTrigger"
+      - "Form validation library"
+
+    typography:
+      section_title:
+        text: "お気軽にご相談ください"
+        font: "Playfair Display Bold"
+        size: "clamp(2.5rem, 6vw, 4rem)"
+        color: "#FFFFFF"
+        text_align: "center"
+        animation: "fade in"
+
+      contact_info:
+        font: "Noto Sans JP Regular"
+        size: "clamp(1rem, 2.5vw, 1.3rem)"
+        color: "rgba(255,255,255,0.8)"
+
+    contact_form:
+      layout: "2-column (SP: 1-column)"
+      style:
+        background: "rgba(255,255,255,0.05)"
+        border: "1px solid rgba(255,255,255,0.1)"
+        border_radius: "20px"
+        padding: "50px"
+        backdrop_filter: "blur(10px)"
+
+      form_fields:
+        style:
+          background: "rgba(255,255,255,0.1)"
+          border: "1px solid rgba(255,255,255,0.2)"
+          border_radius: "10px"
+          padding: "15px 20px"
+          color: "#FFFFFF"
+          placeholder_color: "rgba(255,255,255,0.6)"
+
+        focus_style:
+          border_color: "#FFFFFF"
+          box_shadow: "0 0 20px rgba(255,255,255,0.2)"
+
+      submit_button:
+        background: "#FFFFFF"
+        color: "#000000"
+        padding: "18px 50px"
+        border_radius: "50px"
+        font_weight: "bold"
+        hover: "transform: scale(1.05); box-shadow: 0 10px 40px rgba(255,255,255,0.3)"
+
+# ===== レスポンシブ対応 =====
+responsive_breakpoints:
+  mobile: "0px - 767px"
+  tablet: "768px - 1023px"
+  desktop: "1024px+"
+
+responsive_adjustments:
+  mobile:
+    - "フォントサイズを clamp() で調整"
+    - "縦書きテキストを横書きに変更"
+    - "Grid レイアウトを 1 カラムに"
+    - "パディング・マージンを 50% に削減"
+    - "ホバーエフェクトをタップエフェクトに変更"
+
+  tablet:
+    - "中間サイズでの適切なレイアウト調整"
+    - "画像サイズの最適化"
+    - "タッチ操作に適したインタラクション"
+
+# ===== パフォーマンス最適化 =====
+performance:
+  images:
+    - "WebP フォーマット + JPEG フォールバック"
+    - "responsive images with srcset"
+    - "lazy loading + Intersection Observer"
+    - "画像圧縮 80% quality"
+
+  animations:
+    - "GPU アクセラレーション使用"
+    - "will-change プロパティの適切な使用"
+    - "Intersection Observer で viewport 外のアニメーション停止"
+
+  code_splitting:
+    - "セクション別 JavaScript 読み込み"
+    - "Critical CSS のインライン化"
+    - "非同期読み込みでの速度向上"
+
+# ===== アクセシビリティ =====
+accessibility:
+  - "キーボードナビゲーション対応"
+  - "スクリーンリーダー対応"
+  - "適切なカラーコントラスト比 (4.5:1 以上)"
+  - "focus indicators の明確化"
+  - "semantic HTML の使用"
+  - "alt text の適切な設定"

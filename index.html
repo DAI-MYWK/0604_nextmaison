@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      株式会社ネクストメゾン | 住民ファースト。まちに、暮らしに、寄り添う。
+    </title>
+    <meta
+      name="description"
+      content="大阪市東淀川区を中心とした地域密着型不動産会社。50年以上の実績と住民第一主義で、あなたの暮らしをサポートします。"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">ネクストメゾン</span>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link">ホーム</a></li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">会社案内</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link">事業内容</a>
+          </li>
+          <li class="nav-item">
+            <a href="#values" class="nav-link">私たちの想い</a>
+          </li>
+          <li class="nav-item">
+            <a href="#commitment" class="nav-link">取り組み</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">お問い合わせ</a>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="hero-bg"
+              style="background-image: url('img/main01.png')"
+            ></div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="hero-bg"
+              style="background-image: url('img/mansion01.png')"
+            ></div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="hero-bg"
+              style="background-image: url('img/main02.png')"
+            ></div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="hero-bg"
+              style="background-image: url('img/mansion02.png')"
+            ></div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="hero-bg"
+              style="background-image: url('img/main03.png')"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title" id="hero-title">
+            まちに、暮らしに、寄り添う。
+          </h1>
+          <p class="hero-subtitle" id="hero-subtitle">
+            誰かの「ただいま」が、今日もこの街に灯るように。
+          </p>
+        </div>
+        <div class="hero-contact">
+          <div class="hero-phone">
+            <span class="phone-label">お電話でのお問い合わせ</span>
+            <a href="tel:06-0000-0000" class="phone-number">06-0000-0000</a>
+          </div>
+          <a href="#contact" class="cta-contact">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+        <span>SCROLL</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="section-number">01</div>
+            <h2 class="section-title vertical-title">５０年、この街とともに</h2>
+            <div class="about-description">
+              <p>
+                創業から半世紀。私たちは大阪市東淀川区という一つの地域に深く根ざし、住む人々の暮らしを見守り続けてきました。
+              </p>
+              <p>
+                大きな開発や派手な投資ではなく、今ここにある暮らしの価値を大切に育てること。それが私たちネクストメゾンの信念です。
+              </p>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="about-image-main">
+              <img
+                src="img/mansion03.png"
+                alt="東淀川区の街並み"
+                class="parallax-image"
+              />
+            </div>
+            <div class="about-image-small">
+              <img
+                src="img/main04.png"
+                alt="住まいの風景"
+                class="floating-image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"
+                />
+              </svg>
+            </div>
+            <h3>地域密着５０年以上の信頼</h3>
+            <p>町を知り、空気を知り、人を知る。それが私たちの原点です。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7V9C15 11.8 12.8 14 10 14S5 11.8 5 9V7L3 7V9C3 13.4 6.6 17 11 17.9V20H6V22H18V20H13V17.9C17.4 17 21 13.4 21 9Z"
+                />
+              </svg>
+            </div>
+            <h3>業界トップクラスの適正価格</h3>
+            <p>透明性と誠実さで、わかりやすい料金体系を実現しています。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 12C14.21 12 16 10.21 16 8S14.21 4 12 4 8 5.79 8 8 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                />
+              </svg>
+            </div>
+            <h3>顔の見える管理体制</h3>
+            <p>困ったときにすぐ相談できる、安心のサポート体制です。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision" id="mission-vision">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">MISSION & VISION</span>
+          <h2 class="section-title">私たちの使命と目指す未来</h2>
+        </div>
+
+        <div class="mission-vision-grid">
+          <div class="mission-card">
+            <div class="card-number">Mission</div>
+            <h3>「少しでも長くいたい」と思える、まちと住まいを。</h3>
+            <p>
+              地域に根ざした誠実な住まいづくりを通じて、そこに住む人々が安心し、長く暮らしたいと思える空間と時間を提供します。50年以上の歴史に培われた信頼を継承しながら、今の時代にふさわしい「住まいのあり方」を提案し続けます。
+            </p>
+            <div class="card-bg-image">
+              <img src="img/familylivingkitchen02.png" alt="家族の暮らし" />
+            </div>
+          </div>
+
+          <div class="vision-card">
+            <div class="card-number">Vision</div>
+            <h3>地域に選ばれ、住民に愛される"暮らしのパートナー"へ。</h3>
+            <p>
+              物件の提供にとどまらず、地域の風土や文化、人とのつながりを大切にした新しいライフスタイルを創出する不動産企業を目指します。再開発でも、大規模投資でもなく、「今ある暮らしの価値」を丁寧に育てていくことを大切にします。
+            </p>
+            <div class="card-bg-image">
+              <img src="img/familylivingkitchen04.png" alt="住まいの価値" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values" id="values">
+      <div class="values-bg"></div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">５つの大切にする価値観</h2>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-text">
+              <div class="value-number">Value 01</div>
+              <h3>住民第一主義</h3>
+              <p>
+                入居者の声に耳を傾け、小さな不満にも即応します。困ったときにすぐ相談できる「顔の見える管理体制」を大切にします。50年の歴史の中で培った信頼関係を、一人ひとつの住民の方との丁寧な対話の中で育んでいきます。
+              </p>
+            </div>
+            <div class="value-visual">
+              <div class="value-image-main">
+                <img src="img/lobby_mailboxes01.png" alt="住民サービス" />
+              </div>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-text">
+              <div class="value-number">Value 02</div>
+              <h3>地域密着の誇り</h3>
+              <p>
+                町を知り、空気を知り、人を知る。それが私たちの原点です。物件の価値は、地域との関係性の中にあります。東淀川区という一つの地域に深く根ざし、この街の文化や歴史とともに歩み続けています。
+              </p>
+            </div>
+            <div class="value-visual">
+              <div class="value-image-main">
+                <img src="img/mansion04.png" alt="地域密着" />
+              </div>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-text">
+              <div class="value-number">Value 03</div>
+              <h3>あたらしい「住まい」の形をつくる</h3>
+              <p>
+                築年数のある物件でも、リノベーションや活用方法によって"次の暮らし方"を提案します。古さを魅力に変える発想で価値を生み出し、時代に合った住まいのあり方を常に模索しています。
+              </p>
+            </div>
+            <div class="value-visual">
+              <div class="value-image-main">
+                <img src="img/singlelivingkitchen01.png" alt="リノベーション" />
+              </div>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-text">
+              <div class="value-number">Value 04</div>
+              <h3>透明性と誠実さ</h3>
+              <p>
+                家賃や管理費、契約の仕組みなど、わかりにくい部分は一つひとつ丁寧にご説明します。長年の信頼を守るため、誠実な姿勢を貫き、お客様に安心していただける取引を心がけています。
+              </p>
+            </div>
+            <div class="value-visual">
+              <div class="value-image-main">
+                <img src="img/familylivingkitchen06.png" alt="誠実なサービス" />
+              </div>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-text">
+              <div class="value-number">Value 05</div>
+              <h3>まちを育て、まちと育つ</h3>
+              <p>
+                空き家活用やコミュニティ支援、地域清掃など、町とともに歩む取り組みを積極的に推進していきます。住民の皆さまとともに、より良い街づくりに貢献していきたいと考えています。
+              </p>
+            </div>
+            <div class="value-visual">
+              <div class="value-image-main">
+                <img src="img/mansion06.png" alt="地域貢献" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-particles"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-number">02</div>
+          <h2 class="section-title">私たちにできること</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card large">
+            <div class="service-image">
+              <img src="img/mansion07.png" alt="不動産賃貸業" />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-content">
+              <h3>不動産賃貸業</h3>
+              <p>マンション・アパート・一軒家の賃貸</p>
+              <ul class="service-details">
+                <li>マンション・アパート賃貸</li>
+                <li>一軒家賃貸</li>
+                <li>店舗・事業用テナント</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img src="img/familylivingkitchen03.png" alt="不動産管理・仲介" />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-content">
+              <h3>不動産管理・仲介</h3>
+              <p>売買・交換・賃貸借仲介および物件管理</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img src="img/familylivingkitchen05.png" alt="新しい住まい" />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-content">
+              <h3>新しい住まいの形</h3>
+              <p>多様なライフスタイルに対応した空間提供</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img src="img/kitchen01.png" alt="住宅宿泊事業" />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-content">
+              <h3>住宅宿泊事業</h3>
+              <p>住宅宿泊事業法に基づく各種サービス</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="commitment" id="commitment">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">地域とともに歩む取り組み</h2>
+        </div>
+
+        <div class="commitment-items">
+          <div class="commitment-item">
+            <div class="commitment-image">
+              <img
+                src="img/mansion08.png"
+                alt="地域清掃活動"
+                class="parallax-img"
+              />
+            </div>
+            <div class="commitment-content">
+              <h3>地域清掃活動</h3>
+              <p>
+                毎月第一土曜日、地域の皆さまと一緒に街をきれいに保つ活動を続けています。美しい街は、住む人の心も豊かにします。
+              </p>
+            </div>
+          </div>
+
+          <div class="commitment-item reverse">
+            <div class="commitment-image">
+              <img
+                src="img/familylivingkitchen07.png"
+                alt="空き家活用"
+                class="parallax-img"
+              />
+            </div>
+            <div class="commitment-content">
+              <h3>空き家活用プロジェクト</h3>
+              <p>
+                古い建物に新しい価値を。リノベーションによって、築年数を重ねた物件も魅力的な住空間に再生します。
+              </p>
+            </div>
+          </div>
+
+          <div class="commitment-item">
+            <div class="commitment-image">
+              <img
+                src="img/familylivingkitchen09.png"
+                alt="コミュニティ支援"
+                class="parallax-img"
+              />
+            </div>
+            <div class="commitment-content">
+              <h3>コミュニティ支援</h3>
+              <p>
+                地域イベントの会場提供や住民交流の場づくりを通じて、人と人とのつながりを大切にしています。
+              </p>
+            </div>
+          </div>
+
+          <div class="commitment-item reverse">
+            <div class="commitment-image">
+              <img
+                src="img/bathroom01.png"
+                alt="24時間サポート"
+                class="parallax-img"
+              />
+            </div>
+            <div class="commitment-content">
+              <h3>24時間サポート体制</h3>
+              <p>
+                緊急時も安心。水回りのトラブルや設備の不具合など、いつでも相談できる体制を整えています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Area Section -->
+    <section class="area" id="area">
+      <div class="area-bg">
+        <img src="img/mansion09.png" alt="東淀川区" class="area-bg-image" />
+      </div>
+      <div class="area-overlay"></div>
+      <div class="container">
+        <div class="area-content">
+          <h2 class="area-title">東淀川区を中心とした<br />地域密着サービス</h2>
+          <div class="area-features">
+            <div class="area-feature">
+              <span class="feature-number">01</span>
+              <h4>交通アクセスの良さ</h4>
+              <p>阪急電鉄、JR、大阪メトロが利用可能</p>
+            </div>
+            <div class="area-feature">
+              <span class="feature-number">02</span>
+              <h4>商店街の活気</h4>
+              <p>地域に根ざした個人商店が軒を連ねる</p>
+            </div>
+            <div class="area-feature">
+              <span class="feature-number">03</span>
+              <h4>子育て環境の充実</h4>
+              <p>公園や教育施設が身近にある安心の環境</p>
+            </div>
+            <div class="area-feature">
+              <span class="feature-number">04</span>
+              <h4>歴史と文化</h4>
+              <p>淀川の恵みと歴史ある街並みが共存</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Section -->
+    <section class="company" id="company">
+      <div class="container">
+        <div class="company-grid">
+          <div class="company-info">
+            <div class="section-number">03</div>
+            <h2 class="section-title">会社案内</h2>
+
+            <div class="company-stats">
+              <div class="stat-item">
+                <span class="stat-number">50</span>
+                <span class="stat-label">年以上の歴史</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">1000</span>
+                <span class="stat-label">万円の資本金</span>
+              </div>
+            </div>
+
+            <div class="company-details">
+              <div class="detail-item">
+                <dt>会社名</dt>
+                <dd>株式会社ネクストメゾン</dd>
+              </div>
+              <div class="detail-item">
+                <dt>代表取締役</dt>
+                <dd>玉村ナオ</dd>
+              </div>
+              <div class="detail-item">
+                <dt>所在地</dt>
+                <dd>大阪府大阪市東淀川区大隈1-4-4</dd>
+              </div>
+              <div class="detail-item">
+                <dt>資本金</dt>
+                <dd>1,000万円</dd>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-visual">
+            <div class="company-image-main">
+              <img src="img/main01.png" alt="会社風景" />
+            </div>
+            <div class="company-message">
+              <blockquote>
+                "住む人の笑顔こそが、私たちの誇りです。50年間変わらない想いで、これからも地域に寄り添い続けます。"
+              </blockquote>
+              <cite>代表取締役 玉村ナオ</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="contact-bg"></div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title light">お気軽にご相談ください</h2>
+          <p class="section-subtitle light">
+            住まいのことなら、どんな小さなことでもお聞かせください
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <h4>お電話でのお問い合わせ</h4>
+              <p class="contact-phone">06-0000-0000</p>
+              <p class="contact-hours">平日 9:00-18:00（土日祝応相談）</p>
+            </div>
+
+            <div class="contact-item">
+              <h4>メールでのお問い合わせ</h4>
+              <p class="contact-email">nextmaison.official@gmail.com</p>
+            </div>
+
+            <div class="contact-item">
+              <h4>所在地</h4>
+              <p class="contact-address">
+                〒533-0007<br />
+                大阪府大阪市東淀川区大隈1-4-4
+              </p>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">お名前 <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email"
+                >メールアドレス <span class="required">*</span></label
+              >
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">電話番号</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="category">お問い合わせ種別</label>
+              <select id="category" name="category">
+                <option value="">選択してください</option>
+                <option value="rental">賃貸物件</option>
+                <option value="sale">売買</option>
+                <option value="management">管理</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message"
+                >メッセージ <span class="required">*</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              送信する
+              <svg class="btn-arrow" viewBox="0 0 24 24">
+                <path d="M5 12h14m-7-7l7 7-7 7" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>株式会社ネクストメゾン</h3>
+            <p>住民ファースト。まちに、暮らしに、寄り添う。</p>
+          </div>
+          <div class="footer-info">
+            <p>〒533-0007 大阪府大阪市東淀川区大隈1-4-4</p>
+            <p>TEL: 06-0000-0000 / EMAIL: nextmaison.official@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Next Maison Co., Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
