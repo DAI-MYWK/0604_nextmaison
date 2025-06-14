@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initFormHandling();
   initSmoothScroll();
   initParallaxEffects();
+  initSectionLineAnimation();
 });
 
 // ==========================================================================
@@ -744,4 +745,28 @@ if ("IntersectionObserver" in window) {
   });
 
   lazyImages.forEach((img) => imageObserver.observe(img));
+}
+
+// ==========================================================================
+// Section Line Animation
+// ==========================================================================
+
+function initSectionLineAnimation() {
+  gsap.utils.toArray(".section-line").forEach((line) => {
+    gsap.fromTo(
+      line,
+      { width: "0%", opacity: 0 },
+      {
+        width: "100%",
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: line.parentElement,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
 }

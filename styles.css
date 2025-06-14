@@ -1476,4 +1476,34 @@ body {
 .phone-number:hover,
 .contact-phone {
     display: none;
+}
+
+/* ==========================================================================
+   Section Line Effect
+   ========================================================================== */
+
+.section-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 4px;
+    background: #000000;
+    transform-origin: right;
+    opacity: 0;
+    z-index: 10;
+}
+
+.section-line.light {
+    background: #ffffff;
+}
+
+/* 各セクションのコンテナに相対位置を設定 */
+.about,
+.services,
+.values,
+.commitment,
+.contact {
+    position: relative;
+    overflow: hidden;
 } 
