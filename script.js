@@ -486,27 +486,46 @@ function initCounters() {
 // ==========================================================================
 
 function initSmoothScroll() {
-  const navLinks = document.querySelectorAll('a[href^="#"]');
+  const navLinks = document.querySelectorAll(".nav-link");
+  const ctaContact = document.querySelector(".cta-contact");
 
+  // ヘッダーのナビゲーションリンク
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-
       const targetId = this.getAttribute("href");
       const targetSection = document.querySelector(targetId);
 
       if (targetSection) {
-        gsap.to(window, {
-          duration: 1.5,
-          scrollTo: {
-            y: targetSection,
-            offsetY: 80,
-          },
-          ease: "power2.inOut",
+        const headerHeight = document.querySelector(".navbar").offsetHeight;
+        const targetPosition = targetSection.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
         });
       }
     });
   });
+
+  // ヒーローセクションの問い合わせボタン
+  if (ctaContact) {
+    ctaContact.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        const headerHeight = document.querySelector(".navbar").offsetHeight;
+        const targetPosition = targetSection.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+    });
+  }
 }
 
 // ==========================================================================
